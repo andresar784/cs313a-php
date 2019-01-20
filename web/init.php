@@ -40,10 +40,10 @@
               <a class="nav-link js-scroll-trigger" href="#about">About me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Social</a>
+              <a class="nav-link js-scroll-trigger" href="#social">Social</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Assignments</a>
+              <a class="nav-link js-scroll-trigger" href="#assignments">Assignments</a>
             </li>
 			<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#pictures">Pictures</a>
@@ -81,7 +81,7 @@
       </div>
     </section>
 
-    <section id="services" class="bg-light">
+    <section id="social" class="bg-light">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -95,7 +95,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="assignments">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
