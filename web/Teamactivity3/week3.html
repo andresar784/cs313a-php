@@ -4,14 +4,23 @@
 </head>
 <body>
     <form action="welcome.php" method="post">
-        Name: <input type="text" name="name"><br>
-        Email:  <input type="email" name="email"><br>
+        <label for="name"> Name: <input type="text" id="name" name="name"/></label><br/>
+        <label for="email"> Email <input type="email" id="email" name="email"></label><br/>
         Major:
         <input type="radio" name="major" value="Computer Science">Computer Science
         <input type="radio" name="major" value="Web Design and Development">Web Design and Development
         <input type="radio" name="major" value="Computer Design and Development">Computer information Technology
         <input type="radio" name="major" value="Computer Engineering">Computer Engineering<br>
-        Comment: <textarea name="comment" rows="5" cols="40"></textarea>
-        <input type="submit">
+        Comment: <textarea name="comment" rows="5" cols="40"></textarea><br>
+        <input type="submit" value="Submit">
+        Visited continents:
+        <input type="checkbox" name="continents" value="North America">North America
+        <input type="checkbox" name="continents" value="South America">South America
+        <input type="checkbox" name="continents" value="Europe">Europe
+        <input type="checkbox" name="continents" value="Asia">Asia
+        <input type="checkbox" name="continents" value="Australia">Australia
+        <input type="checkbox" name="continents" value="Africa">Africa
+        <input type="checkbox" name="continents" value="">
+
     </form>
 </body>
