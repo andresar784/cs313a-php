@@ -1,4 +1,4 @@
-<?php if(isset(echo $_POST["name"])){
+<?php if(isset($_POST["name"])){
     ?>
 
     
@@ -16,7 +16,7 @@
     <?php foreach($_POST["continents"] as $countries){
         echo $countries;
         echo ", ";
-    } ?>
+    }?>
 </body>
 </html>>
 
