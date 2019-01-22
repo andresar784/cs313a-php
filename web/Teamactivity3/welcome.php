@@ -16,7 +16,7 @@
     <?php foreach($_POST["continents"] as $countries){
         echo $countries;
         echo ", ";
-    }
+    } ?>
 </body>
 </html>>
 
