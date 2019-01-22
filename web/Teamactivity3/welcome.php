@@ -12,7 +12,7 @@
     Mail address <?php echo $_POST["email"];?><br>
     Major <?php echo $_POST["major"];?><br>
     Comments <?php echo $_POST["comment"];?>
-    Visited Continents <?php echo $_POST["continents"]; ?><br>
+    Visited Continents 
     <?php foreach($_POST["continents"] as $countries){
         echo $countries;
         echo ", ";
