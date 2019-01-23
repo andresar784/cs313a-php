@@ -18,6 +18,6 @@
         echo ", ";
     }?>
 </body>
-</html>>
+</html>
 
 <?php }
