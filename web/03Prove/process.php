@@ -73,20 +73,20 @@ session_start();
   </div>
 </nav>
 
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4"> 
-      <div class="panel panel-danger">
-        <div class="panel-heading">You purchased</div>
-		 <div class="panel-heading"><button class="btn btn-secondary" id="removeAll">Remove all items</button></div>
-		<div class="panel-heading">
-		<?php
-              $arrlength = count($_SESSION["add_cart"]);
+<div class=" text-white p-5">
+        <div class="p-3 text-white text-center">
+          <h2>Shopping Cart</h2>
+          <button class="btn btn-secondary" id="removeAll">Remove all items</button>
+        </div>
+        
+        <div class="container border border-dark justify-content-center col-lg-6 p-3">
+              <?php
+              $arrlength = count($_SESSION["cart"]);
               if($arrlength > 0)
               {
                 echo "<ul>";
                 for($x = 0; $x < $arrlength; $x++) {
-                  echo "<li>" . $_SESSION["cart"][$x] . juice" </li>";
+                  echo "<li>" . $_SESSION["cart"][$x] . " juice</li>";
                   echo "<br/>";
                   echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
                   echo "<br/>";
@@ -94,14 +94,11 @@ session_start();
                 echo "</ul>";
               };
               ?>
-			  </div>
-        
-		</div>
-  	</div>
-    </div>
-    
-  </div>
-</div><br>
+        </div>
+</div>
+
+
+
 
 <br><br>
 
