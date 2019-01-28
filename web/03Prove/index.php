@@ -1,0 +1,145 @@
+<?php
+// Start the session
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Uruguayan Things</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Uruguayan things</h1>      
+    <p>The best place  to purchase Uruguayan things</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+		<li><a href="process.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+		
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading" id="dulce" value="Dulce de leche">Dulce de leche</div>
+        <div class="panel-body"><img src="pictures/dulce de leche.jpg" class="img-responsive" alt="Image"></div>
+	        <div class="panel-footer">Delicious and hand made</div>
+			<div class="panel-footer">Price: $ <span id="dl" value="150">150</span></div>
+				
+				<div class="panel-footer">
+					Items: <input type="text" value="0" size="3"><br></input>
+					<input type="submit" value="Add to a Cart" style="text-center"></input>
+					</div>
+			
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading" id="caramelos" value="Caramelos de dulce de leche" >Caramelos de dulce de leche</div>
+        <div class="panel-body"><img src="pictures/caramelos dulce de leche.jpg" class="img-responsive"  alt="Image"></div>
+        <div class="panel-footer">Pack of 10 delicious candies</div>
+			<div class="panel-footer">Price: $ <span id="cdl" value="100">100</span></div>
+				<div class="panel-footer">
+					Items: <input type="text" value="0" size="3"><br></input>
+					<input type="submit" value="Add to a Cart" style="text-center"></input>
+					</div>
+  	</div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading" id="vacumm" value="Vacuum">Vacuum</div>
+        <div class="panel-body"><img src="pictures/termo.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Vacuum to maintain warm watter</div>
+		<div class="panel-footer">Price: $ <span id="vacumm" value="500">500</span></div>
+				<div class="panel-footer">
+					Items: <input type="text" value="0" size="3"><br></input>
+					<input type="submit" value="Add to a Cart" style="text-center"></input>
+					</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading" id="yerba" value="Yerba">Yerba mate</div>
+        <div class="panel-body"><img src="pictures/yerba mate.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">To prepare delicious mate</div>
+		<div class="panel-footer">Price: $ <span id="ym" value="30">30</span></div>
+				<div class="panel-footer">
+					Items: <input type="text" value="0" size="3"><br></input>
+					<input type="submit" value="Add to a Cart" style="text-center"></input>
+					</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading" id="mate" value="Mate">Mate</div>
+        <div class="panel-body"><img src="pictures/mate.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Where you prepare your delicious mate</div>
+		<div class="panel-footer">Price: $ <span id="mate" value="15">15</span></div>
+				<div class="panel-footer">
+					Items: <input type="text" value="0" size="3"><br></input>
+					<input type="submit" value="Add to a Cart" style="text-center"></input>
+					</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading" id="bombilla" value="Bombilla">Bombilla</div>
+        <div class="panel-body"><img src="pictures/bombilla mate.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">To drink the mate</div>
+		<div class="panel-footer">Price: $ <span id="bm" value="15">15</span></div>
+				<div class="panel-footer">
+					Items: <input  type="text" value="0" size="3"><br></input>
+					<input type="submit" value="Add to a Cart" style="text-center"></input>
+					</div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright</p>  
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+  </form>
+</footer>
+
+</body>
+</html>
