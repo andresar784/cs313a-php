@@ -87,14 +87,14 @@ session_start();
 			  
               if($arrlength > 0)
               {
-					echo "<ul>";
-					for($x = 0; $x < $arrlength; $x++) {
-					echo "<li>" . $_SESSION["add_cart"][$x] . " juice</li>";
-					echo "<br/>";
-					echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
-					echo "<br/>";
+                 <ul>;
+                for($x = 0; $x < $arrlength; $x++) {
+					      echo "<li>" . $_SESSION["add_cart"][$x] . " juice</li>";
+					      echo "<br/>";
+					      echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
+					      echo "<br/>";
                 }
-                echo "</ul>";
+                </ul>;
               };
               ?>
         </div>
