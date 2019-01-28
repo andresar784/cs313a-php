@@ -12,6 +12,30 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="style.css" rel="stylesheet">
+  
+  <script>
+    $(document).ready(function(){
+      $("#removeAll").click(function(){
+        $.post("remove_all.php",
+        {
+        },
+        );
+      alert("Items have been removed");
+      });
+    });
+	
+    $(document).ready(function(){
+      $(".remove").click(function(){
+        $.post("remove_cart.php",
+        {
+          item: $(this).val()
+        },
+        );
+      alert("item removed from shopping cart");
+      });
+    });
+  </script>
+  
 </head>
 <body>
 
@@ -54,14 +78,15 @@ session_start();
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
         <div class="panel-heading">You purchased</div>
+		 <div class="panel-heading"><button class="btn btn-secondary" id="removeAll">Remove all items</button></div>
 		<div class="panel-heading">
-         <?php
-              $arrlength = count($_SESSION["cart"]);
+		<?php
+              $arrlength = count($_SESSION["add_cart"]);
               if($arrlength > 0)
               {
                 echo "<ul>";
                 for($x = 0; $x < $arrlength; $x++) {
-                  echo "<li>" . $_SESSION["cart"][$x] . " </li>";
+                  echo "<li>" . $_SESSION["cart"][$x] . juice" </li>";
                   echo "<br/>";
                   echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
                   echo "<br/>";
