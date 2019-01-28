@@ -54,6 +54,7 @@ session_start();
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
         <div class="panel-heading">You purchased</div>
+		<div class="panel-heading">
          <?php
               $arrlength = count($_SESSION["cart"]);
               if($arrlength > 0)
@@ -68,6 +69,7 @@ session_start();
                 echo "</ul>";
               };
               ?>
+			  </div>
         
 		</div>
   	</div>
