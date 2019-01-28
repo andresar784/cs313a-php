@@ -80,16 +80,19 @@ session_start();
         </div>
         
         <div class="container border border-dark justify-content-center col-lg-6 p-3">
-              <?php
-              $arrlength = count($_SESSION["cart"]);
+              
+			  <?php
+              
+			  $arrlength = count($_SESSION["add_cart"]);
+			  
               if($arrlength > 0)
               {
-                echo "<ul>";
-                for($x = 0; $x < $arrlength; $x++) {
-                  echo "<li>" . $_SESSION["cart"][$x] . " juice</li>";
-                  echo "<br/>";
-                  echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
-                  echo "<br/>";
+					echo "<ul>";
+					for($x = 0; $x < $arrlength; $x++) {
+					echo "<li>" . $_SESSION["add_cart"][$x] . " juice</li>";
+					echo "<br/>";
+					echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
+					echo "<br/>";
                 }
                 echo "</ul>";
               };
