@@ -54,11 +54,22 @@ session_start();
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
         <div class="panel-heading">You purchased</div>
-        <div class="panel-body"><img src="" class="img-responsive"  alt="Image"></div>
-        <div class="panel-footer">Pack of 10 delicious candies</div>
-			<div class="panel-footer">Price: $ <span id="cdl" value="100">100</span></div>
-				<div class="panel-footer">
-					</div>
+         <?php
+              $arrlength = count($_SESSION["cart"]);
+              if($arrlength > 0)
+              {
+                echo "<ul>";
+                for($x = 0; $x < $arrlength; $x++) {
+                  echo "<li>" . $_SESSION["cart"][$x] . " </li>";
+                  echo "<br/>";
+                  echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
+                  echo "<br/>";
+                }
+                echo "</ul>";
+              };
+              ?>
+        
+		</div>
   	</div>
     </div>
     

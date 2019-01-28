@@ -12,6 +12,21 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="style.css" rel="stylesheet">
+  
+       
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $.post("add_cart.php",
+      {
+        item: $(this).val()
+      },
+      );
+      alert("You added " + $(this).val() + " to shopping cart");
+    });
+  });
+  </script>
+  
 </head>
 <body>
 
@@ -55,13 +70,8 @@ session_start();
       <div class="panel panel-primary">
         <div class="panel-heading" id="dulce" value="Dulce de leche">Dulce de leche</div>
         <div class="panel-body"><img src="pictures/dulce de leche.jpg" class="img-responsive" alt="Image"></div>
-	        <div class="panel-footer">Delicious and hand made</div>
-			<div class="panel-footer">Price: $ <span id="dl" value="150">150</span></div>
-				
-				<div class="panel-footer">
-					Items: <input type="text" value="0" size="3"><br></input>
-					<input type="submit" value="Add to a Cart" style="text-center"></input>
-					</div>
+		<div class="panel-footer">Delicious and hand made</div>
+		<button class="btn btn-secondary" value="Dulce de leche">Add to Cart</button>
 			
       </div>
     </div>
@@ -70,25 +80,16 @@ session_start();
         <div class="panel-heading" id="caramelos" value="Caramelos de dulce de leche" >Caramelos de dulce de leche</div>
         <div class="panel-body"><img src="pictures/caramelos dulce de leche.jpg" class="img-responsive"  alt="Image"></div>
         <div class="panel-footer">Pack of 10 delicious candies</div>
-			<div class="panel-footer">Price: $ <span id="cdl" value="100">100</span></div>
-				<div class="panel-footer">
-					Items: <input type="text" value="0" size="3"><br></input>
-					<input type="submit" value="Add to a Cart" style="text-center"></input>
-					</div>
-  	</div>
+		<button class="btn btn-secondary" value="Caramelos">Add to Cart</button>
     </div>
+	</div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
         <div class="panel-heading" id="vacumm" value="Vacuum">Vacuum</div>
         <div class="panel-body"><img src="pictures/termo.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">Vacuum to maintain warm watter</div>
-		<div class="panel-footer">Price: $ <span id="vacumm" value="500">500</span></div>
-				<div class="panel-footer">
-					Items: <input type="text" value="0" size="3"><br></input>
-					<input type="submit" value="Add to a Cart" style="text-center"></input>
-					</div>
-      </div>
-    </div>
+		<button class="btn btn-secondary" value="Vacuum">Add to Cart</button>
+	</div>
   </div>
 </div><br>
 
@@ -99,11 +100,7 @@ session_start();
         <div class="panel-heading" id="yerba" value="Yerba">Yerba mate</div>
         <div class="panel-body"><img src="pictures/yerba mate.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">To prepare delicious mate</div>
-		<div class="panel-footer">Price: $ <span id="ym" value="30">30</span></div>
-				<div class="panel-footer">
-					Items: <input type="text" value="0" size="3"><br></input>
-					<input type="submit" value="Add to a Cart" style="text-center"></input>
-					</div>
+		<button class="btn btn-secondary" value="Yerba Mate">Add to Cart</button>
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -111,11 +108,7 @@ session_start();
         <div class="panel-heading" id="mate" value="Mate">Mate</div>
         <div class="panel-body"><img src="pictures/mate.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">Where you prepare your delicious mate</div>
-		<div class="panel-footer">Price: $ <span id="mate" value="15">15</span></div>
-				<div class="panel-footer">
-					Items: <input type="text" value="0" size="3"><br></input>
-					<input type="submit" value="Add to a Cart" style="text-center"></input>
-					</div>
+			<button class="btn btn-secondary" value="Mate">Add to Cart</button>
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -123,14 +116,13 @@ session_start();
         <div class="panel-heading" id="bombilla" value="Bombilla">Bombilla</div>
         <div class="panel-body"><img src="pictures/bombilla mate.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">To drink the mate</div>
-		<div class="panel-footer">Price: $ <span id="bm" value="15">15</span></div>
-				<div class="panel-footer">
-					Items: <input  type="text" value="0" size="3"><br></input>
-					<input type="submit" value="Add to a Cart" style="text-center"></input>
-					</div>
-      </div>
+			<button class="btn btn-secondary" value="Bombilla">Add to Cart</button>
+				
+     </div> 
     </div>
   </div>
+
+
 </div><br><br>
 
 <footer class="container-fluid text-center">
