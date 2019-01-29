@@ -1,4 +1,5 @@
 <?php
+session_name("process");
 // Start the session
 session_start();
 ?>
@@ -87,7 +88,7 @@ session_start();
 			  
               if($arrlength > 0)
               {
-                 echo "<ul>";
+                echo "<ul>";
                 for($x = 0; $x < $arrlength; $x++) {
 					      echo "<li>" . $_SESSION["add_cart"][$x]"</li>";
 					      echo "<br/>";

@@ -1,8 +1,9 @@
 <?php
+session_name("add_cart");
 session_start();
 
 $item = $_REQUEST["item"];
-alert("You added " + $(this).val() + " to shopping cart");
+alert("You added " + $(this).val() + " to add_cart");
 
 if($_SESSION["process"]) {
 	
