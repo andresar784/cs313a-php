@@ -2,12 +2,12 @@
 
 session_start();
 
-if(isset($_SESSION['nombre'])) 
+if(!isset($_SESSION['nombre'])) 
 { 
    echo "no hay session";
 
 }else{
-    echo " si jaj hay session";
+    echo " si hay session";
     echo "NOMBRE".$_SESSION['nombre'];
 }
 $item = $_REQUEST["item"];
