@@ -1,4 +1,5 @@
 <?php
+session_name('index');
 // Start the session
 session_start();
 ?>

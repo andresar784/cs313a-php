@@ -1,5 +1,5 @@
 <?php
-
+session_name('process');
 // Start the session
 session_start();
 if(!isset($_SESSION['nombre'])) 
