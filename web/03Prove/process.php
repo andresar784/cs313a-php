@@ -89,7 +89,7 @@ session_start();
               {
                  echo "<ul>";
                 for($x = 0; $x < $arrlength; $x++) {
-					      echo "<li>" . $_SESSION["add_cart"][$x]</li>";
+					      echo "<li>" . $_SESSION["add_cart"][$x]"</li>";
 					      echo "<br/>";
 					      echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
 					      echo "<br/>";
