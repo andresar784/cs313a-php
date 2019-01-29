@@ -1,9 +1,16 @@
 <?php
-session_name("add_cart");
+
 session_start();
 
+if(!isset($_SESSION['nombre'])) 
+{ 
+   echo "no hay session";
+
+}else{
+    echo " si hay session";
+    echo "NOMBRE".$_SESSION['nombre'];
+}
 $item = $_REQUEST["item"];
-alert("You added " + $(this).val() + " to add_cart");
 
 if($_SESSION["process"]) {
 	
