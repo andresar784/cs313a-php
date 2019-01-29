@@ -10,6 +10,7 @@ if(!isset($_SESSION['nombre']))
     echo " si hay session";
     echo "NOMBRE".$_SESSION['nombre'];
 }
+
 $item = $_REQUEST["item"];
 
 if($_SESSION["process"]) {
