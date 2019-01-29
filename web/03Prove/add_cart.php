@@ -1,5 +1,5 @@
 <?php
-session_name(add_cart);
+session_name("add_cart");
 session_start();
 
 if(!isset($_SESSION['nombre'])) 
