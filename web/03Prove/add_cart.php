@@ -2,6 +2,7 @@
 session_start();
 
 $item = $_REQUEST["item"];
+alert("You added " + $(this).val() + " to shopping cart");
 
 if($_SESSION["process"]) {
 	
