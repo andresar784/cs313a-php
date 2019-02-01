@@ -89,7 +89,7 @@ if(!isset($_SESSION['process']))
 		  <a class="btn-secondary" href="checkout.php">Continue to checkout</a>
         </div>
         
-        
+        <div class="p-3 text-white text-center">
              <?php
               
 			  $arrlength = count($_SESSION["add_cart"]);
@@ -106,6 +106,7 @@ if(!isset($_SESSION['process']))
               };
 			 
               ?>
+			  </div>
 			  
         </div>
 
@@ -115,11 +116,7 @@ if(!isset($_SESSION['process']))
 <br><br>
 
 <footer class="container-fluid text-center">
-  <p>Online Store Copyright</p>  
-  <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-  </form>
+  <p>Online Store Copyright 2018 - <?php echo date(Y)?></p>  
 </footer>
 
 </body>
