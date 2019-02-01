@@ -56,15 +56,17 @@ session_start();
 			$address = htmlspecialchars($_POST["address"]);
 			$city = htmlspecialchars($_POST["city"]);
 			$state = htmlspecialchars($POST["state"]);
-			 $arrlength = count($_SESSION["cart"]);
+			 $arrlength = count($_SESSION["add_cart"]);
 			echo "<ul>";
 				for($x = 0; $x < $arrlength; $x++) {
-				echo "<li>" . $_SESSION["cart"][$x] . "</li>";
+				echo "<li>" . $_SESSION["process"][$x] . "</li>";
 				}
 				echo "</ul>";
 			?>
 			<br/>
-			<p>Shipping Address:</p>
+			<p>Shipping Address:</p><br>
+			<p>This order will be delivered in 2 weeks</p><br>
+			
 			<?php
 				echo $address;
 				echo "<br/>";
