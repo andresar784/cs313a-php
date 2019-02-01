@@ -18,7 +18,7 @@ session_start();
     $("button").click(function(){
       $.post("add_cart.php",
       {
-        item: $(this).val()
+        item = $(this).val()
       },
       );
       alert("You added " + $(this).val() + " to shopping cart");
