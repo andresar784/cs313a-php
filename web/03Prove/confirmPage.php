@@ -1,20 +1,11 @@
-<?php
-session_name('process');
+<?
 // Start the session
 session_start();
-if(!isset($_SESSION['process'])) 
-{ 
-   echo "no hay session";
-
-}else{
-    echo " si hay session";
-    echo "NOMBRE".$_SESSION['process'];
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Process page</title>
+  <title>Uruguayan Things</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -22,30 +13,7 @@ if(!isset($_SESSION['process']))
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="style.css" rel="stylesheet">
   
-  <script>
-    $(document).ready(function(){
-      $("#removeAll").click(function(){
-        $.post("remove_all.php",
-        {
-        },
-        );
-      alert("Items have been removed");
-      });
-    });
-	
-    $(document).ready(function(){
-      $(".remove").click(function(){
-        $.post("remove_cart.php",
-        {
-          item: $(this).val()
-        },
-        );
-      alert("item removed from shopping cart");
-      });
-    });
-  </script>
-  
-</head>
+ </head>
 <body>
 
 <div class="jumbotron">
@@ -84,35 +52,29 @@ if(!isset($_SESSION['process']))
 
 <div class=" text-white p-5">
         <div class="p-3 text-white text-center">
-          <h2>Shopping Cart</h2>
-          <button class="btn btn-secondary" id="removeAll">Remove all items</button>
-		  <a class="btn-secondary" href="checkout.php">Continue to checkout</a>
+          <h2>Your order will be send to:</h2>
+			<div class="form-group">
+			<?php
+			$address = htmlspecialchars($_POST["address"]);
+			$city = htmlspecialchars($_POST["city"]);
+			$state = htmlspecialchars($POST["state"]);
+			 $arrlength = count($_SESSION["cart"]);
+			echo "<ul>";
+				for($x = 0; $x < $arrlength; $x++) {
+				echo "<li>" . $_SESSION["cart"][$x] . "</li>";
+				}
+				echo "</ul>";
+			?>
+			<br/>
+			<p>Shipping Address:</p>
+			<?php
+				echo $address;
+				echo "<br/>";
+				echo $city, $state;
+        ?>
         </div>
-        
-        
-             <?php
-              
-			  $arrlength = count($_SESSION["add_cart"]);
-				if($arrlength > 0)
-              {
-                echo "<ul>";
-                for($x = 0; $x < $arrlength; $x++) {
-					      echo "<li>" . $_SESSION["add_cart"][$x] ."</li>";
-					      echo "<br/>";
-					      echo "<button class='remove btn btn-secondary' value=$x>Remove Item From List</button>";
-					      echo "<br/>";
-                }
-                echo "</ul>";
-              };
-			 
-              ?>
-			  
-        </div>
-
-
-
-
-<br><br>
+</div>
+</div>
 
 <footer class="container-fluid text-center">
   <p>Online Store Copyright</p>  
