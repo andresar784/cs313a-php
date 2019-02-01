@@ -68,7 +68,9 @@ session_start();
 			<?php
 				echo $address;
 				echo "<br/>";
-				echo $city, $state;
+				echo $city;
+				echo "<br/>";				
+				echo $state;
         ?>
         </div>
 </div>

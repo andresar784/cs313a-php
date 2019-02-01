@@ -61,11 +61,11 @@ session_start();
           <div class="form-row">
             <div class="form-group">
               <label for="inputCity">City</label>
-              <input type="text"  name="city" id="inputCity" placeholder="Your City" size="30">
+              <input type="text"  name="city" id="inputCity" placeholder="Your City" size="25">
             </div>
             <div class="form-group">
               <label for="inputState">State</label>
-              <input type="text" name="state" id="inputState" placeholder="ID" size="30">
+              <input type="text" name="state" id="inputState" placeholder="ID" size="25">
             </div>
             
           </div>
