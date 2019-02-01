@@ -55,7 +55,9 @@ session_start();
 			<?php
 			$address = htmlspecialchars($_POST["address"]);
 			$city = htmlspecialchars($_POST["city"]);
-			$state = htmlspecialchars($POST["state"]);
+			$state = htmlspecialchars($_POST["state"]);
+			
+			
 			 $arrlength = count($_SESSION["add_cart"]);
 			echo "<ul>";
 				for($x = 0; $x < $arrlength; $x++) {
