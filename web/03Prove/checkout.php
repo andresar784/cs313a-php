@@ -1,5 +1,4 @@
 <?php
-session_name('checkout');
 // Start the session
 session_start();
 ?>

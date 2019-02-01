@@ -3,9 +3,9 @@ session_start();
 
 $itemnumber = $_REQUEST["item"];
 
-unset($_SESSION["cart"][$itemnumber]);
+unset($_SESSION["process"][$itemnumber]);
 
-$_SESSION["cart"] = array_values($_SESSION["cart"]);
+$_SESSION["process"] = array_values($_SESSION["process"]);
 
-var_dump($_SESSION["cart"]);
+var_dump($_SESSION["process"]);
 ?>

@@ -6,6 +6,6 @@ session_unset();
 
 session_destroy();
 
-$_SESSION["cart"] = array();
+$_SESSION["process"] = array();
 
 ?>

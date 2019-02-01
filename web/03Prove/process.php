@@ -1,15 +1,5 @@
 <?php
-session_name('process');
-// Start the session
 session_start();
-if(!isset($_SESSION['process'])) 
-{ 
-   echo "no hay session";
-
-}else{
-    echo " si hay session";
-    echo "NOMBRE".$_SESSION['process'];
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

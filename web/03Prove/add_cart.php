@@ -1,5 +1,4 @@
 <?php
-session_name('add_cart');
 session_start();
 
 $item = $_REQUEST["item"];
