@@ -101,7 +101,7 @@
           <div class="col-lg-8 mx-auto">
             <h2>Assigments</h2>
 			<a href="assignments.php">Click here to access to the assignments</a>
-            <p class="lead">Coming soon!</p>
+            <p class="lead">Some assignments are ready</p>
 			
           </div>
         </div>

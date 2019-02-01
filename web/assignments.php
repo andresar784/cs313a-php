@@ -59,7 +59,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Assignments</h2>
-            <p class="lead">Coming soon!</p>
+            <a class="lead" href="https://aqueous-garden-84856.herokuapp.com/03Prove/index.php">Week 03 Shopping Cart</p>
 			
           </div>
         </div>
