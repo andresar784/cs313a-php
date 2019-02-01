@@ -50,17 +50,12 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="#">Stores</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-		<li><a href="process.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-		
-      </ul>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="index.php">Products</a></li>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
+	  <li><a href="process.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+		</ul>
     </div>
   </div>
 </nav>
@@ -77,7 +72,7 @@ session_start();
       </div>
     </div>
     <div class="col-sm-4"> 
-      <div class="panel panel-danger">
+      <div class="panel panel-primary">
         <div class="panel-heading" id="caramelos" value="Caramelos de dulce de leche" >Caramelos de dulce de leche</div>
         <div class="panel-body"><img src="pictures/caramelos dulce de leche.jpg" class="img-responsive"  alt="Image"></div>
         <div class="panel-footer">Pack of 10 delicious candies</div>
@@ -85,7 +80,7 @@ session_start();
     </div>
 	</div>
     <div class="col-sm-4"> 
-      <div class="panel panel-success">
+      <div class="panel panel-primary">
         <div class="panel-heading" id="vacumm" value="Vacuum">Vacuum</div>
         <div class="panel-body"><img src="pictures/termo.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">Vacuum to maintain warm watter</div>
@@ -127,11 +122,7 @@ session_start();
 </div><br><br>
 
 <footer class="container-fluid text-center">
-  <p>Online Store Copyright</p>  
-  <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-  </form>
+  <p>Online Store Copyright 2018 <?php echo date(Y)?></p>  
 </footer>
 
 </body>
