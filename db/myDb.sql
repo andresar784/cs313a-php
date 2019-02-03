@@ -11,8 +11,8 @@ CREATE TABLE "users"(
 CREATE TABLE "prices"(
     "id" INTEGER NOT NULL,
     "value" INTEGER,
-    "base price" FLOAT;
-    PRIMARY KEY (id)
+    "base price" FLOAT,
+    PRIMARY KEY (id),
 
 );
 
