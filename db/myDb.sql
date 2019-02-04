@@ -27,4 +27,6 @@ CREATE TABLE "ticket"(
 	"id" INTEGER NOT NULL,
     PRIMARY KEY (id), 
 
+    
+
 );
