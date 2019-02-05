@@ -30,3 +30,9 @@ CREATE TABLE "ticket"(
     
 
 );
+
+ALTER TABLE users ADD FOREIGN KEY ("id") REFERENCES "ticket" ("id");
+ALTER TABLE users ADD FOREIGN KEY ("id") REFERENCES "places" ("id");
+ALTER TABLE ticket ADD FOREIGN KEY ("id") REFERENCES "prices" ("id");
+
+
