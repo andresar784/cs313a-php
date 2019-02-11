@@ -33,7 +33,7 @@
 			$statement->execute();
 			$row = $statement->fetch(PDO::FETCH_ASSOC));
 			
-			$place_1 = row[1];
+			/* $place_1 = row[1]; */
 		
 			
 		}
