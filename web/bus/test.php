@@ -29,10 +29,10 @@
 				echo $row['id'] . " " . $row['place_name'] . '<br/>';}
 				
 		foreach ($db->query('SELECT id, place_nameFROM place') as $row)
-				{
+				
 					$id = $row['id'];
 					$place_name = $row['place_name'];
-				}
+				
 				
 		echo $id;
 		
