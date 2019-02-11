@@ -49,7 +49,7 @@
 		$place_4 = SELECT * FROM place WHERE id = 4;
 		$place_5 = SELECT * FROM place WHERE id = 5;
  */
-		echo row[1]; 
+		/* echo row[1];  */
 ?>
 
 
