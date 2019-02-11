@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bus Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+  
+</head>
+<body>
 <?php
 
 		try
@@ -31,36 +44,6 @@
 		$place_5 = SELECT * FROM place WHERE placeid = 5;
 
 		echo $place_1;
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bus Company</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link href="style.css" rel="stylesheet">
-  
-</head>
-<body>
-<?php
-
-require_once('bd.php');
-$db = DB::init();
-$error = "something wrong";
-echo $error;
-$statement = $db->prepare("SELECT id, name FROM place");
-$statement->execute();
-$place_1 = SELECT * FROM place WHERE placeid = 1;
-$place_2 = SELECT * FROM place WHERE placeid = 2;
-$place_3 = SELECT * FROM place WHERE placeid = 3;
-$place_4 = SELECT * FROM place WHERE placeid = 4;
-$place_5 = SELECT * FROM place WHERE placeid = 5;
-
-echo $place_1;
 ?>
 
 
