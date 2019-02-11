@@ -26,7 +26,7 @@
 		$statement->execute();
 		
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-				echo $row['id'] . $row['place_name'] . '<br/>';}
+				echo $row['id'] . " " . $row['place_name'] . '<br/>';}
 				
 		
 				
