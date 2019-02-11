@@ -34,21 +34,21 @@
 		echo 'Error!: ' . $ex->getMessage();
 		die();
 		}
-
+		
 		$statement = $db->prepare('SELECT id, place_name FROM place');
 		$statement->execute();
 		$row = $statement->fetch(PDO::FETCH_ASSOC));
 		
 		/* $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
 		$stmt->execute(array(':name' => $name, ':id' => $id));
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
 		
 		$place_1 = SELECT * FROM place WHERE id = 1;
 		$place_2 = SELECT * FROM place WHERE id = 2;
 		$place_3 = SELECT * FROM place WHERE id = 3;
 		$place_4 = SELECT * FROM place WHERE id = 4;
-		$place_5 = SELECT * FROM place WHERE id = 5;
- */
+		$place_5 = SELECT * FROM place WHERE id = 5; 
+ 
 		
 ?>
 
