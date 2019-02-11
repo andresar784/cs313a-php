@@ -22,7 +22,7 @@
 		}
 		
 
-		$statement = $db->prepare('SELECT id, place_name FROM place;');
+		$statement = $db->prepare('SELECT id, place_name FROM place';);
 		$statement = execute();
 		
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
