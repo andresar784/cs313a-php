@@ -28,19 +28,19 @@
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 			$place_name[$row['place_name']] = $row['place_name'];
 		}
-			
-		echo place_name[0];
+		var_dump($place_name);
+		
 				
 				
 				
-				echo $row['id'] . " " . $row['place_name'] . '<br/>';}
+				/* echo $row['id'] . " " . $row['place_name'] . '<br/>';}
 				
 		foreach ($db->query('SELECT id, place_name FROM place') as $row)
 				$id = $row['id'];
 				$place_name = $row['place_name'];
 				
 				
-		echo $place_name;
+		echo $place_name; */
 		
 				
 
