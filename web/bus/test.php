@@ -22,8 +22,8 @@
 		}
 		
 
-		$statement = $db->prepare('SELECT id, place_name FROM place';);
-		$statement = execute();
+		$statement = $db->prepare("SELECT id, place_name FROM place");
+		$statement->execute();
 		
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 				echo $row['id'] . '<br/>';}
