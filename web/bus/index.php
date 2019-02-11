@@ -63,7 +63,7 @@ $place_5 = SELECT * FROM place WHERE placeid = 5;
 		<div class="form-group">
 			<label for="exampleFormControlSelect1">From:</label>
 			<select class="form-control" id="exampleFormControlSelect1">
-					<option><?php echo $GLOBALS['place_1'] ?></option>
+					<option><?php echo?></option>
 					<option>2</option>
 					<option>3</option>
 					<option>4</option>
