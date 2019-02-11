@@ -29,7 +29,7 @@
 			$place_name[$row['id']] = $row['place_name'];
 		}
 		var_dump($place_name);
-		echo $place_name["Montevideo"];
+		echo $place_name[1];
 		
 				
 				
