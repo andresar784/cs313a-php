@@ -28,7 +28,7 @@
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 				echo $row['id'] . " " . $row['place_name'] . '<br/>';}
 				
-		foreach ($db->query('SELECT username, password FROM note_user') as $row)
+		foreach ($db->query('SELECT id, place_nameFROM place') as $row)
 				{
 					$id = $row['id'];
 					$place_name = $row['place_name'];
