@@ -62,10 +62,10 @@ $db = DB::init();
 			<label for="exampleFormControlSelect1">From:</label>
 			<select class="form-control" id="exampleFormControlSelect1">
 					<option><?php echo $place_name[1]?></option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+					<option><?php echo $place_name[2]?></option>
+					<option><?php echo $place_name[3]?></option>
+					<option><?php echo $place_name[4]?></option>
+					<option><?php echo $place_name[5]?></option>
 				</select>
 				
 		</div>
