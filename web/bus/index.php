@@ -30,14 +30,7 @@ $db = DB::init();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-	  <?php
-	$statement = $db->prepare("SELECT id, place_name FROM places";
-	$statement->execute();
-	while($row = $statement->fetch(PDO::FETCH_ASSOC))
-	{
-	echo $row['id'] . $row['place_name']
-	}
-?>
+	  
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
