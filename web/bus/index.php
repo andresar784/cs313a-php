@@ -37,7 +37,7 @@
 
 		$statement = $db->prepare('SELECT id, place_name FROM place');
 		$statement->execute();
-		$row = $statement->fetchAll(PDO::FETCH_ASSOC))
+		/* $row = $statement->fetchAll(PDO::FETCH_ASSOC)) */
 		
 		/* $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
 		$stmt->execute(array(':name' => $name, ':id' => $id));
