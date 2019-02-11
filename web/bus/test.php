@@ -22,7 +22,7 @@
 		}
 		<?php
 
-		$statement = $db->query('SELECT id, place_name FROM place')
+		$statement = $db->execute('SELECT id, place_name FROM place')
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 				echo $row['id'] . '<br/>';}
 				
