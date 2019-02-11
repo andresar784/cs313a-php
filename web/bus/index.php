@@ -15,6 +15,17 @@ $db = DB::init();
   
 </head>
 <body>
+<?php
+	$statement = $db->prepare("SELECT id, place_name FROM place");
+	$statement->execute();
+	$place_name = array();
+	while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+		$place_name[$row['id']] = $row['place_name'];
+	}
+	
+	echo $place_name[5];
+
+?>
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -50,7 +61,7 @@ $db = DB::init();
 		<div class="form-group">
 			<label for="exampleFormControlSelect1">From:</label>
 			<select class="form-control" id="exampleFormControlSelect1">
-					<option>1</option>
+					<option><?php echo $place_name[1]?></option>
 					<option>2</option>
 					<option>3</option>
 					<option>4</option>
