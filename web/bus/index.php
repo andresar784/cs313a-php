@@ -23,7 +23,7 @@ $db = DB::init();
 		$place_name[$row['id']] = $row['place_name'];
 	}
 	
-	echo $place_name[5];
+	
 
 ?>
 
@@ -74,11 +74,12 @@ $db = DB::init();
 		<div class="form-group">
 			<label for="exampleFormControlSelect1">To:</label>
 				<select class="form-control" id="exampleFormControlSelect2">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+					<option><?php echo $place_name[1]?></option>
+					<option><?php echo $place_name[2]?></option>
+					<option><?php echo $place_name[3]?></option>
+					<option><?php echo $place_name[4]?></option>
+					<option><?php echo $place_name[5]?></option>
+
 				</select>
 		</div>
 		</div>
