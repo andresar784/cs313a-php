@@ -1,7 +1,8 @@
 <?php
 require_once('db.php');
 $db = DB::init();
-
+$error = "something wrong";
+echo $error;
 $statement = $db->prepare("SELECT id, name FROM place");
 $statement->execute();
 $place_1 = SELECT * FROM place WHERE placeid = 1;
