@@ -1,5 +1,6 @@
 <?php
-require_once('db.php');
+
+require_once('bd.php');
 $db = DB::init();
 $error = "something wrong";
 echo $error;
