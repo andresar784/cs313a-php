@@ -1,3 +1,7 @@
+<?php
+require("bd.php");
+$db = DB::init();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,47 +16,14 @@
 </head>
 <body>
 <?php
-
-		try
-		{	
-			$dbUrl = getenv('DATABASE_URL');
-
-			$dbOpts = parse_url($dbUrl);
-
-			$dbHost = $dbOpts["host"];
-			$dbPort = $dbOpts["port"];
-			$dbUser = $dbOpts["user"];
-			$dbPassword = $dbOpts["pass"];
-			$dbName = ltrim($dbOpts["path"],'/');
-
-			$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			
-			$statement = $db->prepare("SELECT id, place_name FROM place");
-			$statement->execute();
-			
-			
-		
-		
-			
-		}
-		catch (PDOException $ex)
-		{
-		echo 'Error!: ' . $ex->getMessage();
-		die();
-		}
+	
 ?>
-
-
 <div class="jumbotron">
   <div class="container text-center">
 	<h1>Star Bus<h1>
     <h3>Buy your ticket now</h3>      
-    
-  </div>
+    </div>
 </div>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
