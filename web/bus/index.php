@@ -16,7 +16,12 @@ $db = DB::init();
 </head>
 <body>
 <?php
-	
+	$statement = $db->prepare("SELECT id, place_name FROM places";
+	$statement->execute();
+	while($row = $statement->fetch(PDO::FETCH_ASSOC))
+	{
+	echo $row['id'] . $row['place_name']
+	}
 ?>
 <div class="jumbotron">
   <div class="container text-center">
