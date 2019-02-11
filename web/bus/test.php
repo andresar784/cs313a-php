@@ -12,15 +12,6 @@
 			$dbName = ltrim($dbOpts["path"],'/');
 
 			$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-			$statement = $db->prepare("SELECT id, place_name FROM place";
-	
-			$statement->execute();
-			while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-				<p>
-					echo $row['id'] . $row['place_name'];
-				</p>
-		}
-
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
 		catch (PDOException $ex)
