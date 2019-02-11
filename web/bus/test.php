@@ -24,17 +24,23 @@
 
 		$statement = $db->prepare("SELECT id, place_name FROM place");
 		$statement->execute();
-		
+		$place_name = array();
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+			$place_name[$row['place_name']] = $row['place_name'];
+		}
+			
+		echo place_name[0];
+				
+				
+				
 				echo $row['id'] . " " . $row['place_name'] . '<br/>';}
 				
-		foreach ($db->query('SELECT id, place_nameFROM place') as $row)
+		foreach ($db->query('SELECT id, place_name FROM place') as $row)
+				$id = $row['id'];
+				$place_name = $row['place_name'];
 				
-					$id = $row['id'];
-					$place_name = $row['place_name'];
 				
-				
-		echo $id;
+		echo $place_name;
 		
 				
 
