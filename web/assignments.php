@@ -59,8 +59,11 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Assignments</h2>
-            <a class="lead" href="https://aqueous-garden-84856.herokuapp.com/03Prove/index.php">Week 03 Shopping Cart<br></a>
+            <a class="lead" href="https://aqueous-garden-84856.herokuapp.com/03Prove/index.php">Week 03 Shopping Cart</a>
+            </div>
+            <div class="col-lg-8 mx-auto">
             <a class="lead" href="https://aqueous-garden-84856.herokuapp.com/bus/index.php">Week 05 Connecting to DB</a>
+            </div>
           </div>
         </div>
       </div>
