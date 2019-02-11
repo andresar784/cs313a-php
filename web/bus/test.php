@@ -29,6 +29,7 @@
 			$place_name[$row['place_name']] = $row['place_name'];
 		}
 		var_dump($place_name);
+		echo place_name[0];
 		
 				
 				
