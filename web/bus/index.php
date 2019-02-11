@@ -22,7 +22,7 @@
 		die();
 		}
 
-		$statement = prepare("SELECT id, name FROM place");
+		$statement = $db->prepare("SELECT id, name FROM place");
 		$statement->execute();
 		$place_1 = SELECT * FROM place WHERE placeid = 1;
 		$place_2 = SELECT * FROM place WHERE placeid = 2;
