@@ -12,41 +12,21 @@ session_start();
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="style.css" rel="stylesheet">
   
-       
-  
-  
 </head>
 <body>
 <?php
-	try
-	{
-		$dbUrl = getenv('DATABASE_URL');
+require_once('db.php');
+$db = DB::init();
 
-		$dbOpts = parse_url($dbUrl);
-
-		$dbHost = $dbOpts["host"];
-		$dbPort = $dbOpts["port"];
-		$dbUser = $dbOpts["user"];
-		$dbPassword = $dbOpts["pass"];
-		$dbName = ltrim($dbOpts["path"],'/');
-
-		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	}
-	catch (PDOException $ex)
-	{
-	echo 'Error!: ' . $ex->getMessage();
-	die();
-	}
-	
-	
+$statement = $db->prepare("SELECT id, name FROM place");
+$statement->execute();
+$place_1 = SELECT * FROM place WHERE placeid = 1;
+$place_2 = SELECT * FROM place WHERE placeid = 2;
+$place_3 = SELECT * FROM place WHERE placeid = 3;
+$place_4 = SELECT * FROM place WHERE placeid = 4;
+$place_5 = SELECT * FROM place WHERE placeid = 5;
 
 ?>
-
-
-	
-
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -83,7 +63,7 @@ session_start();
 		<div class="form-group">
 			<label for="exampleFormControlSelect1">From:</label>
 			<select class="form-control" id="exampleFormControlSelect1">
-					<option>1</option>
+					<option><?php echo $GLOBALS['place_1'] ?></option>
 					<option>2</option>
 					<option>3</option>
 					<option>4</option>
