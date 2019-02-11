@@ -22,7 +22,7 @@ session_start();
 	{
 		$dbUrl = getenv('DATABASE_URL');
 
-		$dbOps = parse_url($dbUrl);
+		$dbOpts = parse_url($dbUrl);
 
 		$dbHost = $dbOpts["host"];
 		$dbPort = $dbOpts["port"];
