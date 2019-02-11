@@ -7,7 +7,7 @@
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		$place_name[$row['id']] = $row['place_name'];
 	}
-	var_dump($place_name);
+	
 	echo $place_name[5];
 		
 				
