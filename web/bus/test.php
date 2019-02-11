@@ -12,7 +12,7 @@
 			$dbName = ltrim($dbOpts["path"],'/');
 
 			$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-			echo "Connected";
+			
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
 		catch (PDOException $ex)
@@ -20,6 +20,15 @@
 		echo 'Error!: ' . $ex->getMessage();
 		die();
 		}
-	
-	
+		<?php
+
+		$statement = $db->query('SELECT id, place_name FROM place')
+		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+				echo $row['id'] . '<br/>';}
+				
+		?>
+				
+
 ?>
+	
+	
