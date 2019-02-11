@@ -1,17 +1,36 @@
 <?php
 
-require_once('bd.php');
-$db = DB::init();
+		try
+		{	
+			$dbUrl = getenv('DATABASE_URL');
 
-$statement = $db->prepare("SELECT id, name FROM place");
-$statement->execute();
-$place_1 = SELECT * FROM place WHERE placeid = 1;
-$place_2 = SELECT * FROM place WHERE placeid = 2;
-$place_3 = SELECT * FROM place WHERE placeid = 3;
-$place_4 = SELECT * FROM place WHERE placeid = 4;
-$place_5 = SELECT * FROM place WHERE placeid = 5;
+			$dbOpts = parse_url($dbUrl);
 
-echo $place_1;
+			$dbHost = $dbOpts["host"];
+			$dbPort = $dbOpts["port"];
+			$dbUser = $dbOpts["user"];
+			$dbPassword = $dbOpts["pass"];
+			$dbName = ltrim($dbOpts["path"],'/');
+
+			$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		}
+		catch (PDOException $ex)
+		{
+		echo 'Error!: ' . $ex->getMessage();
+		die();
+		}
+
+		$statement = prepare("SELECT id, name FROM place");
+		$statement->execute();
+		$place_1 = SELECT * FROM place WHERE placeid = 1;
+		$place_2 = SELECT * FROM place WHERE placeid = 2;
+		$place_3 = SELECT * FROM place WHERE placeid = 3;
+		$place_4 = SELECT * FROM place WHERE placeid = 4;
+		$place_5 = SELECT * FROM place WHERE placeid = 5;
+
+		echo $place_1;
 ?>
 
 <!DOCTYPE html>
