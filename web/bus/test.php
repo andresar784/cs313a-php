@@ -1,5 +1,6 @@
 <?php
-	try
+	echo = "something";
+	/* try
 		{	
 			$dbUrl = getenv('DATABASE_URL');
 
@@ -26,7 +27,7 @@
 		{
 		echo 'Error!: ' . $ex->getMessage();
 		die();
-		}
+		} */
 	
 	
 ?>
