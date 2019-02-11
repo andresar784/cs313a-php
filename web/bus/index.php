@@ -31,7 +31,7 @@
 			
 			$statement = $db->prepare("SELECT id, place_name FROM place");
 			$statement->execute();
-			$row = $statement->fetchALL(PDO::FETCH_ASSOC));
+			
 			
 		
 		
